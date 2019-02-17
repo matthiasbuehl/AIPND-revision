@@ -73,4 +73,22 @@ def print_results(results_dic, results_stats_dic, model,
         % Correct "Not-a" Dog: {0[pct_correct_notdogs]}
         % Match: {0[pct_match]}
     """.format(results_stats_dic, model))
+    
+    if print_incorrect_dogs:
+        # misclassified dogs
+        if results_stats_dic['n_correct_dogs'] + results_stats_dic['n_correct_notdogs'] != results_stats_dic['n_images']:
+            print('\nMisclassified Dogs')
+            for _, result in results_dic.items():
+                # The labels disagree on whether or not an image is of a "dog"
+                if sum(result[3:]) == 1:
+                    print('Image Labels: {0} -- Classifier Labels: {1}'.format(*result))
+                    
+    if print_incorrect_breed:
+        # misclassified breeds
+        if results_stats_dic['n_correct_dogs'] != results_stats_dic['n_correct_breed']:
+            print('\nMisclassified Breeds')
+            for _, result in results_dic.items():
+                # When the labels agree that image is of a dog, but disagree on the breed of dog
+                if sum(result[3:]) == 2 and result[2] == 0:
+                    print('Image Labels: {0} -- Classifier Labels: {1}'.format(*result))
                 

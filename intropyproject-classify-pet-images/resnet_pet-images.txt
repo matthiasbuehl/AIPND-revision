@@ -326,4 +326,12 @@ Pct Corr dog: 100.0 Pct Corr NOTdog:  90.0  Pct Corr Breed:  90.0
         % Match: 82.5
     
 
+Misclassified Dogs
+Image Labels: cat -- Classifier Labels: norwegian elkhound, elkhound
+
+Misclassified Breeds
+Image Labels: beagle -- Classifier Labels: walker hound, walker foxhound
+Image Labels: great pyrenees -- Classifier Labels: kuvasz
+Image Labels: golden retriever -- Classifier Labels: leonberg
+
 ** Total Elapsed Runtime: 0:0:6

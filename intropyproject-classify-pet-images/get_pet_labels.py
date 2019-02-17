@@ -44,11 +44,22 @@ def get_pet_labels(image_dir):
     # function
     results_dic = {}
     for filename in listdir(image_dir):
-        filename_parts = filename[:-4].lower().split('_')
-        #print('filename_parts: {}'.format(filename_parts))
-        # keep only alpha
+        # skip hidden files
+        if filename.startswith('.'): next
+        
+        # lowercase
+        filename_mod = filename.lower()
+  
+        # remove extension
+        filename_mod = filename_mod[:filename_mod.rfind('.')]
+        
+        # get file parts
+        filename_parts = filename_mod.split('_')
+        
+        # keep only alpha file parts
         filename_parts = list(filter(lambda p: p.isalpha(), filename_parts))
+        
         results_dic[filename] = [' '.join(filename_parts)]
     
-    print('results_dic: {}'.format(results_dic))
+    #print('results_dic: {}'.format(results_dic))
     return results_dic

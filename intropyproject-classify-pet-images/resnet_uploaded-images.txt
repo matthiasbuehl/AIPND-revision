@@ -2,8 +2,70 @@ Command Line Arguments:
      dir = uploaded_images/ 
     arch = resnet 
  dogfile = dognames.txt
-> /home/workspace/get_pet_labels.py(46)get_pet_labels()
--> for filename in listdir(image_dir):
-(Pdb) --KeyboardInterrupt--
-(Pdb) --KeyboardInterrupt--
-(Pdb) (Pdb) 
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                 bloodhound.jpg  label:                 bloodhound
+ 2 key:                       rock.jpg  label:                       rock
+ 3 key:                       duck.jpg  label:                       duck
+ 4 key:               bloodhound_2.jpg  label:                 bloodhound
+
+     MATCH:
+
+                bloodhound.jpg: 
+Real:                 bloodhound   Classifier:        bloodhound, sleuthhound
+
+              bloodhound_2.jpg: 
+Real:                 bloodhound   Classifier:        bloodhound, sleuthhound
+
+ NOT A MATCH:
+
+                      rock.jpg: 
+Real:                       rock   Classifier:                         mortar
+
+                      duck.jpg: 
+Real:                       duck   Classifier:                          goose
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+     MATCH:
+
+                bloodhound.jpg: 
+Real:                 bloodhound   Classifier:        bloodhound, sleuthhound  
+PetLabelDog: 1  ClassLabelDog: 1
+
+              bloodhound_2.jpg: 
+Real:                 bloodhound   Classifier:        bloodhound, sleuthhound  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+                      rock.jpg: 
+Real:                       rock   Classifier:                         mortar  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                      duck.jpg: 
+Real:                       duck   Classifier:                          goose  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
+
+        Model: resnet
+        Number of Images: 4
+        Number of Dog Images: 2
+        Number of "Not-a" Dog Images: 2
+        % Correct Dogs: 100.0
+        % Correct Breed: 100.0
+        % Correct "Not-a" Dog: 100.0
+        % Match: 50.0
+    
+
+** Total Elapsed Runtime: 0:0:0

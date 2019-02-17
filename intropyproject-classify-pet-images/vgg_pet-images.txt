@@ -326,4 +326,8 @@ Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  93.3
         % Match: 87.5
     
 
-** Total Elapsed Runtime: 0:0:36
+Misclassified Breeds
+Image Labels: beagle -- Classifier Labels: walker hound, walker foxhound
+Image Labels: great pyrenees -- Classifier Labels: kuvasz
+
+** Total Elapsed Runtime: 0:0:35

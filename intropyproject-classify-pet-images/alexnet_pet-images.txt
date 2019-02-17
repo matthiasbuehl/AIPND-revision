@@ -326,4 +326,12 @@ Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  80.0
         % Match: 75.0
     
 
+Misclassified Breeds
+Image Labels: golden retriever -- Classifier Labels: afghan hound, afghan
+Image Labels: beagle -- Classifier Labels: walker hound, walker foxhound
+Image Labels: great pyrenees -- Classifier Labels: kuvasz
+Image Labels: beagle -- Classifier Labels: english foxhound
+Image Labels: golden retriever -- Classifier Labels: tibetan mastiff
+Image Labels: boston terrier -- Classifier Labels: basenji
+
 ** Total Elapsed Runtime: 0:0:3
