@@ -45,7 +45,7 @@ def get_pet_labels(image_dir):
     results_dic = {}
     for filename in listdir(image_dir):
         # skip hidden files
-        if filename.startswith('.'): next
+        if filename.startswith('.'): continue
         
         # lowercase
         filename_mod = filename.lower()
