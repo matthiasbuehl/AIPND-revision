@@ -62,5 +62,15 @@ def print_results(results_dic, results_stats_dic, model,
     Returns:
            None - simply printing results.
     """    
-    None
+    
+    print("""
+        Model: {1}
+        Number of Images: {0[n_images]}
+        Number of Dog Images: {0[n_dogs_img]}
+        Number of "Not-a" Dog Images: {0[n_notdogs_img]}
+        % Correct Dogs: {0[pct_correct_dogs]}
+        % Correct Breed: {0[pct_correct_breed]}
+        % Correct "Not-a" Dog: {0[pct_correct_notdogs]}
+        % Match: {0[pct_match]}
+    """.format(results_stats_dic, model))
                 

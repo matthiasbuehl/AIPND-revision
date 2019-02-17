@@ -1,0 +1,9 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+> /home/workspace/get_pet_labels.py(46)get_pet_labels()
+-> for filename in listdir(image_dir):
+(Pdb) --KeyboardInterrupt--
+(Pdb) --KeyboardInterrupt--
+(Pdb) (Pdb) 
